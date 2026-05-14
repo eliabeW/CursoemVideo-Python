@@ -19,7 +19,7 @@ nota1 = float(input('Digite sua primeira nota: '))
 nota2 = float(input('Digite sua segunda nota: '))
 # Calcula a média aritmética
 media = (nota1 + nota2) / 2
-
+print('Tirando {:.1f} e {:.1f}, a média do aluno é {:.1f}'.format(nota1, nota2, media))
 # Média abaixo de 5.0: REPROVADO
 if media < 5.0:
     print('REPROVADO')

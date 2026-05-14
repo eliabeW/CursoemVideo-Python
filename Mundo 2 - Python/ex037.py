@@ -10,7 +10,11 @@ a base de conversão:
 # Pede um número inteiro ao usuário
 numero = int(input('Digite um número inteiro: '))
 # Pede para escolher a base de conversão (1, 2 ou 3)
-base_conversao = int(input('Escolha a base de conversão:\n1 - Binário\n2 - Octal\n3 - Hexadecimal\n '))
+print('Escolha a base de conversão:')
+print('[ 1 ] Binário')
+print('[ 2 ] Octal')
+print('[ 3 ] Hexadecimal')
+base_conversao = int(input('Sua opção: '))
 
 # 1 = Binário: usa bin() e remove os dois primeiros caracteres ('0b')
 if base_conversao == 1:

@@ -7,24 +7,30 @@ será formado:
 - Escaleno: todos os lados diferentes
 """
 
-# Cabeçalho
+# Cabeçalho visual do programa
 print('-=' * 20)
 print('Classificador de Triângulos')
 print('-=' * 20)
 
-# Leitura dos três segmentos
+# a, b, c: armazenam os comprimentos das três retas informadas pelo usuário
+# São usados para verificar se formam um triângulo e qual o tipo
 a = float(input('Comprimento da primeira reta: '))
 b = float(input('Comprimento da segunda reta: '))
 c = float(input('Comprimento da terceira reta: '))
 
-# Condição de existência do triângulo (desigualdade triangular)
+# Condição de existência do triângulo (desigualdade triangular):
+# Cada lado precisa ser menor que a soma dos outros dois
 if a < b + c and b < a + c and c < a + b:
-    # Classificação do tipo de triângulo
+    print('Os segmentos acima PODEM FORMAR um triângulo', end=' ')
+    # Classificação do tipo de triângulo com base na igualdade dos lados
     if a == b == c:
-        print('EQUILÁTERO - todos os lados iguais')
-    elif a == b or b == c or c == a:
-        print('ISÓSCELES - dois lados iguais')
+        # Equilátero: todos os três lados são iguais
+        print('EQUILÁTERO (todos os lados iguais)')
+    elif a != b != c != a:
+        # Escaleno: todos os três lados são diferentes entre si
+        print('ESCALENO (todos os lados diferentes)')
     else:
-        print('ESCALENO - todos os lados diferentes')
+        # Isósceles: dois lados iguais e um diferente (qualquer outro caso)
+        print('ISÓSCELES (dois lados iguais)')
 else:
-    print('As retas NÃO formam um triângulo')
+    print('Os seguimentos acima NÃO PODEM FORMAR triângulo')
