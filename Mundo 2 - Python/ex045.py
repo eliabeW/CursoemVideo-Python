@@ -9,12 +9,9 @@ from time import sleep
 print('{:=^40}'.format(' VAMOS JOGAR? '))
 print('Escolha um dos três símbolos: \n[ 0 ] Pedra \n[ 1 ] Papel \n[ 2 ] Tesoura')
 
-# Tupla com as opções
-itens = ('Pedra', 'Papel', 'Tesoura')
-# Computador escolhe aleatoriamente (0, 1 ou 2)
-computador = randint(0, 2)
-# Jogador faz sua escolha
-jogador = int(input('Qual é a sua jogada? '))
+itens = ('Pedra', 'Papel', 'Tesoura') # Tupla com as opções
+computador = randint(0, 2) # Computador escolhe aleatoriamente (0, 1 ou 2)
+jogador = int(input('Qual é a sua jogada? ')) # Jogador faz sua escolha
 
 # Contagem regressiva para dar suspense
 print('JO')
